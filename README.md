@@ -32,5 +32,5 @@ You won't need to write any code to handle the quotes that appear around the spa
 
 There is no requirement concerning how the program should behave if the file isn't formatted as expected or if the program isn't called with the expected number of arguments.
 
-It's best if you just send us the .java or .cpp file(s) you write, unzipped, without any .class or .exe files.
+It's best if you just send us the .java or .cpp file(s) you write, unzipped, without any .class or .exe files. 
 
