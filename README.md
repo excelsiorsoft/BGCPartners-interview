@@ -14,19 +14,19 @@ Write a Java (or C++) program called “Spacebus3000” that takes three argumen
 
 Here are some sample Java interactions, assuming the example file above is named spacebusroutes.txt…
 
-java Spacebus3000 spacebusroutes.txt “Oort Cloud Observation Facility” “Asteroid Research Institute”
-> yes
+    java Spacebus3000 spacebusroutes.txt “Oort Cloud Observation Facility” “Asteroid Research Institute”
+    > yes
 
-java Spacebus3000 spacebusroutes.txt “Asteroid Research Institute” “Grand Nebula Spaceport”
-> yes
+    java Spacebus3000 spacebusroutes.txt “Asteroid Research Institute” “Grand Nebula Spaceport”
+    > yes
 
-java Spacebus3000 spacebusroutes.txt “Asteroid Research Institute” “Heavy Element Spacemine”
-> no
+    java Spacebus3000 spacebusroutes.txt “Asteroid Research Institute” “Heavy Element Spacemine”
+    > no
 
-java Spacebus3000 spacebusroutes.txt “Asteroid Research Institute” Pluto
-> no
+    java Spacebus3000 spacebusroutes.txt “Asteroid Research Institute” Pluto
+    > no
 
-You can assume that none of the names of the spaceports will contain commas. That is, in the file, there will only be one comma on each line, separating the names of the two spaceports.
+You can assume that none of the names of the spaceports will contain commas. That is, in the file, there will only be one comma on each line, separating the names of the two spaceports. 
 
 You won't need to write any code to handle the quotes that appear around the spaceport names in the example command-line interactions. The command-line environment will naturally take care of that. In the last example command-line interaction, as far as the Java method Spacebus3000.main() is concerned, args[1] is Asteroid Research Institute, and args[2] is Pluto.
 
