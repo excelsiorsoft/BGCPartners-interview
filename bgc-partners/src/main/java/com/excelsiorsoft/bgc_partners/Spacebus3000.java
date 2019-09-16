@@ -23,8 +23,8 @@ public class Spacebus3000 {
 	private static final String COMMA_DELIMITER = ",";
 	
 
-	private Map<String, HashSet<String>> routes = new ConcurrentHashMap<>();
-	Set<String> visited = new HashSet<>();
+	private final Map<String, HashSet<String>> routes = new ConcurrentHashMap<>();
+	private final Set<String> visited = new HashSet<>();
 
 	private void addEdge(final String srcNode, final String destNode) {
 		HashSet<String> adjacentNodes = routes.get(srcNode);
@@ -40,12 +40,12 @@ public class Spacebus3000 {
 		addEdge(destNode, srcNode);
 	}
 
-	public String runsBetween(String srcNode, String destNode) {
+	public String runsBetween(final String srcNode, final String destNode) {
 		visited.clear();
 		return this.isConnected(srcNode, destNode) ? YES : NO;
 	}
 
-	private boolean isConnected(String srcNode, String destNode) {
+	private boolean isConnected(final String srcNode, final String destNode) {
 
 		boolean result = false;
 
@@ -69,7 +69,7 @@ public class Spacebus3000 {
 		return result;
 	}
 
-	private static boolean validate(String... args) {
+	private static boolean validate(final String... args) {
 		boolean result = true;
 		if (args.length < 3) {
 			System.out.println(MSG_TOO_FEW_ARGUMENTS);
@@ -91,7 +91,7 @@ public class Spacebus3000 {
 		return result;
 	}
 
-	public static void main(String... args) throws Exception {
+	public static void main(final String... args) throws Exception {
 		// System.out.println("Hello Gallaxy!");
 
 		
@@ -120,9 +120,9 @@ public class Spacebus3000 {
 			Spacebus3000 bus = primeRoutesRegistry(
 					parseRoutesFile(Spacebus3000.class.getClassLoader().getResource(args[0]).getPath()));
 
-			String src = args[1];
-			String dest = args[2];
-			boolean expandedOutput = args.length == 4 ? Boolean.parseBoolean(args[3]) : false;
+			final String src = args[1];
+			final String dest = args[2];
+			final boolean expandedOutput = args.length == 4 ? Boolean.parseBoolean(args[3]) : false;
 
 			if (expandedOutput) {
 				System.out.println(src + ARROW + dest + COLUMN + bus.runsBetween(src, dest));
@@ -138,9 +138,9 @@ public class Spacebus3000 {
 		return bus;
 	}
 
-	private static List<List<String>> parseRoutesFile(/*List<List<String>> records,*/ final String path) throws IOException, FileNotFoundException {
+	private static List<List<String>> parseRoutesFile(final String path) throws IOException, FileNotFoundException {
 
-		List<List<String>> records = new ArrayList<List<String>>();
+		final List<List<String>> records = new ArrayList<List<String>>();
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String line;
