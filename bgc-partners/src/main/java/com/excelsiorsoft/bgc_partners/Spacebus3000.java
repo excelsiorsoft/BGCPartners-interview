@@ -17,7 +17,7 @@ public class Spacebus3000 {
 	static final String YES = "yes";
 	static final String COLUMN = ":";
 	static final String ARROW = " -> ";
-	static final String USAGE = "Usage:ntjava Spacebus3000 src dest";
+	static final String USAGE = "Usage:\n\tjava Spacebus3000 src dest";
 	static final String MSG_TOO_FEW_ARGUMENTS = "too few arguments";
 	static final String MSG_TOO_MANY_ARGUMENTS = "too many arguments";
 	private static final String COMMA_DELIMITER = ",";
