@@ -82,7 +82,7 @@ public class Spacebus3000 {
 		}
 		else if (args.length == 3 || args.length == 4) {
 		try {
-			Spacebus3000 bus = primeRoutesRegistry(parseRoutesFile(Spacebus3000.class.getClassLoader().getResource(args[0]).getPath()));
+			Spacebus3000.class.getClassLoader().getResource(args[0]).getPath();
 		} catch (Exception e) {
 			System.out.println("Make sure first argument points to a valid file: " + args[0]);
 			result = false;
