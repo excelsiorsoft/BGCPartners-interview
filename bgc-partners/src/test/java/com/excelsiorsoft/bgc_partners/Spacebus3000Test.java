@@ -211,7 +211,7 @@ public class Spacebus3000Test {
 		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		assertEquals(NO+EOL,bytes.toString());
-		
+				
 		//Blue Nova Space Market -> Pluto:no
 	}
 	

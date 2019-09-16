@@ -1,9 +1,7 @@
 package com.excelsiorsoft.bgc_partners;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -25,7 +23,11 @@ public class Spacebus3000 {
 
 	private final Map<String, HashSet<String>> routes = new ConcurrentHashMap<>();
 	private final Set<String> visited = new HashSet<>();
+	
+	private static Spacebus3000 BUS = new Spacebus3000();
 
+	private Spacebus3000() {super();};
+	
 	private void addEdge(final String srcNode, final String destNode) {
 		HashSet<String> adjacentNodes = routes.get(srcNode);
 		if (adjacentNodes == null) {
@@ -114,31 +116,30 @@ public class Spacebus3000 {
 		  System.out.println("DRSH -> GNS: "+bus.runsBetween("Double Ring Space Habitat",
 		  "Grand Nebula Spaceport"));*/
 		 
-				
 		if (validate(args)) {
 
-			Spacebus3000 bus = primeRoutesRegistry(
-					parseRoutesFile(Spacebus3000.class.getClassLoader().getResource(args[0]).getPath()));
+			if(BUS.routes.isEmpty()) {
+				BUS = primeRoutesRegistry(parseRoutesFile(Spacebus3000.class.getClassLoader().getResource(args[0]).getPath()), BUS);
+			}
 
 			final String src = args[1];
 			final String dest = args[2];
 			final boolean expandedOutput = args.length == 4 ? Boolean.parseBoolean(args[3]) : false;
 
 			if (expandedOutput) {
-				System.out.println(src + ARROW + dest + COLUMN + bus.runsBetween(src, dest));
+				System.out.println(src + ARROW + dest + COLUMN + BUS.runsBetween(src, dest));
 			} else {
-				System.out.println(bus.runsBetween(src, dest));
+				System.out.println(BUS.runsBetween(src, dest));
 			}
 		}	
 	}
 	
-	private static Spacebus3000 primeRoutesRegistry(final List<List<String>> records) {
-		Spacebus3000 bus = new Spacebus3000();
+	private static Spacebus3000 primeRoutesRegistry(final List<List<String>> records, final Spacebus3000 bus) {
 		records.stream().forEach(el -> bus.addRoute(el.get(0), el.get(1)));
 		return bus;
 	}
 
-	private static List<List<String>> parseRoutesFile(final String path) throws IOException, FileNotFoundException {
+	private static List<List<String>> parseRoutesFile(final String path) throws Exception {
 
 		final List<List<String>> records = new ArrayList<List<String>>();
 		
