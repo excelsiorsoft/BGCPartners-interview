@@ -2,11 +2,11 @@
 
 Spacebus3000 : It’s the year 3000 and there’s a company called Spacebus that offers rides between certain spaceports. Imagine that you are given a file listing the routes that Spacebus offers. Here’s an example of what the file could look like…
 
-Infrared Spacehub, Grand Nebula Spaceport
-Blue Nova Space Market, Heavy Element Spacemine
-Asteroid Research Institute, Oort Cloud Observation Facility
-Infrared Spacehub, Oort Cloud Observation Facility
-Oort Cloud Observation Facility, Double Ring Space Habitat
+    Infrared Spacehub, Grand Nebula Spaceport
+    Blue Nova Space Market, Heavy Element Spacemine
+    Asteroid Research Institute, Oort Cloud Observation Facility
+    Infrared Spacehub, Oort Cloud Observation Facility
+    Oort Cloud Observation Facility, Double Ring Space Habitat
 
 Each line means there’s a Spacebus route going back and forth between the two spaceports. In the example above, one can take a Spacebus from Asteroid Research Institute to Oort Cloud Observation Facility, and also from Oort Cloud Observation Facility to Infrared Spacehub, and also from Infrared Spacehub to Grand Nebula Spaceport. So it follows that one could travel all the way from Asteroid Research Institute to Grand Nebula Spaceport just using Spacebus. On the other hand, there is no way to get from Asteroid Research Institute to Heavy Element Spacemine using Spacebus.
 
