@@ -52,7 +52,7 @@ public class Spacebus3000Test {
 	public void testARI_GNS() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Grand Nebula Spaceport";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		assertEquals(YES+EOL,bytes.toString());
 		
@@ -63,7 +63,7 @@ public class Spacebus3000Test {
 	public void testARI_GNS_ext() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Grand Nebula Spaceport";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		//assertEquals(YES+EOL,bytes.toString());
 		
@@ -74,7 +74,7 @@ public class Spacebus3000Test {
 	public void testARI_HES() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Heavy Element Spacemine";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		assertEquals(NO+EOL,bytes.toString());
 		
@@ -85,7 +85,7 @@ public class Spacebus3000Test {
 	public void testARI_HES_ext() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Heavy Element Spacemine";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		//assertEquals(NO+EOL,bytes.toString());
 		
@@ -96,7 +96,7 @@ public class Spacebus3000Test {
 	public void testOCOF_ARI() throws Exception {
 		String src = "Oort Cloud Observation Facility";
 		String dest = "Asteroid Research Institute";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		assertEquals(YES+EOL,bytes.toString());
 		
@@ -107,7 +107,7 @@ public class Spacebus3000Test {
 	public void testOCOF_ARI_ext() throws Exception {
 		String src = "Oort Cloud Observation Facility";
 		String dest = "Asteroid Research Institute";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		//assertEquals(NO+EOL,bytes.toString());
 		
@@ -120,7 +120,7 @@ public class Spacebus3000Test {
 	public void testARI_Pluto() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Pluto";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		assertEquals(NO+EOL,bytes.toString());
 		
@@ -131,7 +131,7 @@ public class Spacebus3000Test {
 	public void testARI_Pluto_ext() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Pluto";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		//assertEquals(NO+EOL,bytes.toString());
 		
@@ -142,7 +142,7 @@ public class Spacebus3000Test {
 	public void testGNS_DRSH() throws Exception {
 		String src = "Grand Nebula Spaceport";
 		String dest = "Double Ring Space Habitat";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		assertEquals(YES+EOL,bytes.toString());
 		
@@ -153,7 +153,7 @@ public class Spacebus3000Test {
 	public void testGNS_DRSH_ext() throws Exception {
 		String src = "Grand Nebula Spaceport";
 		String dest = "Double Ring Space Habitat";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		//assertEquals(YES+EOL,bytes.toString());
 		
@@ -164,7 +164,7 @@ public class Spacebus3000Test {
 	public void testDRSH_GNS() throws Exception {
 		String src = "Double Ring Space Habitat";
 		String dest = "Grand Nebula Spaceport";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		assertEquals(YES+EOL,bytes.toString());
 		
@@ -175,7 +175,7 @@ public class Spacebus3000Test {
 	public void testDRSH_GNS_ext() throws Exception {
 		String src = "Double Ring Space Habitat";
 		String dest = "Grand Nebula Spaceport";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+YES+EOL,bytes.toString());
 		//assertEquals(YES+EOL,bytes.toString());
 		
@@ -186,7 +186,7 @@ public class Spacebus3000Test {
 	public void testARI_BNSM() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Blue Nova Space Market";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		assertEquals(NO+EOL,bytes.toString());
 		
@@ -197,7 +197,7 @@ public class Spacebus3000Test {
 	public void testARI_BNSM_ext() throws Exception {
 		String src = "Asteroid Research Institute";
 		String dest = "Blue Nova Space Market";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		//assertEquals(NO+EOL,bytes.toString());
 		
@@ -208,7 +208,7 @@ public class Spacebus3000Test {
 	public void testBNSM_Pluto() throws Exception {
 		String src = "Blue Nova Space Market";
 		String dest = "Pluto";
-		Spacebus3000.main("routes.txt",src,dest);
+		Spacebus3000.main("spacebusroutes.txt",src,dest);
 		//assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		assertEquals(NO+EOL,bytes.toString());
 		
@@ -219,7 +219,7 @@ public class Spacebus3000Test {
 	public void testBNSM_Pluto_ext() throws Exception {
 		String src = "Blue Nova Space Market";
 		String dest = "Pluto";
-		Spacebus3000.main("routes.txt",src,dest, "true");
+		Spacebus3000.main("spacebusroutes.txt",src,dest, "true");
 		assertEquals(src+ARROW+dest+COLUMN+NO+EOL,bytes.toString());
 		//assertEquals(NO+EOL,bytes.toString());
 		
